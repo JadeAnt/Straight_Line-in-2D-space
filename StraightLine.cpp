@@ -29,10 +29,10 @@ double StraightLine::getSlope() const{ // returns the slope
 }
 
 double StraightLine::getXintercept() const{ // returns the x intercept
-  double finalXIntercept;
-                                             
-  finalXIntercept = (-yintercept) / (slope) // 0 = k * x + b -> -b/k = x
-  return finalXIntercept;
+  
+  xintercept = (-yintercept) / (slope) // 0 = k * x + b -> -b/k = x
+  return xintercept;
+  
 }
 
 double StraightLine::getYintercept() const{ // returns the y intercept
@@ -41,9 +41,13 @@ double StraightLine::getYintercept() const{ // returns the y intercept
 
 }
 
-void StraightLine::horizontalShift(); 
+void StraightLine::horizontalShift(double shiftBy){
+  xintercept += shiftBy;
+}
     
-void StraightLine::verticalShift();
+void StraightLine::verticalShift(double shiftBy){
+  yintercept += shiftBy;
+}
    
 void StraightLine::rotateLine();
     
