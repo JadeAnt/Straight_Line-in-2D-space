@@ -11,11 +11,11 @@ class StraightLine{
     
     void expressionofLine(); //returns expression of line in y = k * x + b form
     
-    double getSlope();// returns the slope
+    double getSlope() const;// returns the slope
     
-    double getXintercept(); // returns the x intercept
+    double getXintercept() const; // returns the x intercept
     
-    double getYintercept(); // returns the y intercept
+    double getYintercept() const; // returns the y intercept
    
     void horizontalShift(); // shifts the line to the left or right, by changing the x intercept
     
@@ -23,8 +23,8 @@ class StraightLine{
    
     void rotateLine(); // rotates the line by changing the slope
     
-    bool isParallel();// returns whether or not the line is parallel to another
+    bool operator ||(const StraightLine L2) const; // returns whether or not the line is parallel to another
     
-    void multiplyLineBy(int m); // multiplies the line by an integer number
+    void operator *(const StraightLine L2) const; // multiplies the line by an integer number
     
 }
