@@ -1,7 +1,7 @@
 class StraightLine{
   private:
   
-    double slope, yintercept;
+    double slope, xintercept, yintercept;
 
   public:
     StraightLine(); //non paramaterized constructor
