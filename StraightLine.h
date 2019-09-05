@@ -23,8 +23,8 @@ class StraightLine{
    
     void rotateLine(); // rotates the line by changing the slope
     
-    bool operator ||(const StraightLine L2) const; // returns whether or not the line is parallel to another
+    bool operator ||(const StraightLine& L2) const; // returns whether or not the line is parallel to another
     
-    void operator *(const StraightLine L2) const; // multiplies the line by an integer number
+    void operator *(const StraightLine& L2) const; // multiplies the line by an integer number
     
 }
