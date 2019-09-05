@@ -47,8 +47,19 @@ void StraightLine::verticalShift();
    
 void StraightLine::rotateLine();
     
-bool StraightLine::operator ||(const StraightLine& L2) const; // checks if the two lines are parallel
+bool StraightLine::operator ||(const StraightLine& L2) const{ // checks if the two lines are parallel (L1 || L2)
 
-void StraightLine::operator *(const StraightLine& L2) const; // multiplies the line by an integer number
-    
+  if(L2.slope == slope)
+    return true;
+  else
+    return false;
+
+}
+
+void StraightLine::operator *(){ // multiplies the line by an integer number (L1 * m)
+
+  slope = slope *  m;
+  yintercept = yintercept * m;
+  
+}
 
