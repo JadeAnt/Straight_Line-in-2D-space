@@ -4,7 +4,7 @@
 
 using namespace std;
 
-StraightLine(){ //non paramaterized constructor
+StraightLine::StraightLine(){ //non paramaterized constructor
 
   cout << "Constructing Straight Line Object." << endl;
   slope = 0;
