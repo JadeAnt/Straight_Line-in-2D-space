@@ -46,7 +46,7 @@ void StraightLine::verticalShift();
 void StraightLine::rotateLine();
     
 bool StraightLine::isParallel();
-    
-void StraightLine::multiplyLineBy(int m); // multiplies the line by an integer number
+
+void StraightLine::multiplyLineBy(int multiple); // multiplies the line by an integer number
     
 
