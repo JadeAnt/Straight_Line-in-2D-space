@@ -56,7 +56,7 @@ bool StraightLine::operator ||(const StraightLine& L2) const{ // checks if the t
 
 }
 
-void StraightLine::operator *(){ // multiplies the line by an integer number (L1 * m)
+void StraightLine::operator *(int m){ // multiplies the line by an integer number (L1 * m)
 
   slope = slope *  m;
   yintercept = yintercept * m;
