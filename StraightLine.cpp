@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cmath>
+#include "Point.h"
 
 using namespace std;
 
@@ -20,20 +22,20 @@ void StraightLine::expressionofLine(){ //returns expression of line in y = k * x
   
 }
 
-double StraightLine::getSlope(){ // returns the slope
+double StraightLine::getSlope() const{ // returns the slope
 
   return slope;
 
 }
 
-double StraightLine::getXintercept(){ // returns the x intercept
+double StraightLine::getXintercept() const{ // returns the x intercept
   double finalXIntercept;
                                              
   finalXIntercept = (-yintercept) / (slope) // 0 = k * x + b -> -b/k = x
   return finalXIntercept;
 }
 
-double StraightLine::getYintercept(){ // returns the y intercept
+double StraightLine::getYintercept() const{ // returns the y intercept
 
   return yintercept;
 
@@ -45,8 +47,8 @@ void StraightLine::verticalShift();
    
 void StraightLine::rotateLine();
     
-bool StraightLine::isParallel();
+bool StraightLine::operator ||(const StraightLine& L2) const; // checks if the two lines are parallel
 
-void StraightLine::multiplyLineBy(int multiple); // multiplies the line by an integer number
+void StraightLine::operator *(const StraightLine& L2) const; // multiplies the line by an integer number
     
 
