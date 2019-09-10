@@ -8,14 +8,14 @@ StraightLine::StraightLine() { //non paramaterized constructor
 	cout << "Constructing Straight Line Object.\n";
 	slope = 0;
 	yintercept = 0;
-
+	xintercept - 0;
 }
 
 StraightLine::StraightLine(double k, double b) { // paramaterized constructor
 	cout << "Constructing Straight Line Object.\n";
 	slope = k;
 	yintercept = b;
-
+	xintercept = (-yintercept) / slope ;
 }
 
 void StraightLine::expressionofLine() { //returns expression of line in y = k * x + b form
@@ -30,9 +30,9 @@ double StraightLine::getSlope() const { // returns the slope
 
 }
 
-double StraightLine::getXintercept() { // returns the x intercept
+double StraightLine::getXintercept() const{ // returns the x intercept
 
-	xintercept = (-yintercept) / (slope); // 06 = k * x + b -> -b/k = x
+	// 0 = k * x + b -> -b/k = x
 	return xintercept; // in coordinate form??
 
 }
@@ -56,7 +56,14 @@ void StraightLine::verticalShift(double shiftBy){ //shifts line up or down depen
 }
 
 void StraightLine::rotateLine() { //rotates the line 90 degrees by changing the slope
-	cout << "Test";
+	cout << "Rotating Line 90 degrees \n";
+	
+	double temp = xintercept;
+	xintercept = yintercept;
+	yintercept = -temp;
+	slope = yintercept/ xintercept; 
+	
+	cout << "New Xintercept: " << xintercept << " New Yintercept: " << yintercept << " Slope: " << slope << endl; 
 }
 
 bool StraightLine::operator ||(const StraightLine& L2) const { // checks if the two lines are parallel (L1 || L2)
